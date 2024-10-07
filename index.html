@@ -2,23 +2,329 @@
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Bootstrap demo</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>WingZone</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
 
 <body>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-        crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
-        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
-        crossorigin="anonymous"></script>
+  <header style="position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgb(0 0 0/0.1),0 2px 4px -2px rgb(0 0 0/0.1);">
+    <nav class="navbar navbar-expand-lg" style="background-color: #fff;">
+      <div class="container-fluid">
+        <div class="nodisp">
+          <a class="navbar-brand" href="#"><img src="./assets/images/WZ-logo-desktop.svg" alt=""></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div class="collapse navbar-collapse centi" id="navbarNavDropdown">
+          <ul class="navbar-nav" style="gap: 2rem; align-items: center;">
+            <li class="nav-item">
+              <a class="navbar-brand" href="#"><img src="./assets/images/WZ-logo-desktop.svg" alt=""></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">NEW WZ</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">OUR MENU</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FLAVORS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">FRANCHISING</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">OFFERS</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">LOCATIONS</a>
+            </li>
+            <li class="nav-item p-2">
+              <button class="btn " type="submit"
+                style="color: #000;font-size: 1rem; font-weight: 700; padding: 15px 20px; border-radius: 0; border: 2px solid red;">ORDER
+                ONLINE</button>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto">
+          <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+              <div class="carousel-item active" data-bs-interval="3000">
+                <img src="./assets/images/Fall-FootballCraft-Desktop-Header.webp" class="d-block w-100" alt="...">
+              </div>
+              <div class="carousel-item" data-bs-interval="3000">
+                <img src="./assets/images/New-Shop-Hero-Desktop.webp" class="d-block w-100" alt="...">
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-fluid py-5">
+        <div class="col-md-9 mx-auto flavor">
+          <div class="col-md-10 mx-auto py-5">
+            <div class="row ">
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Original Wings</h5>
+                    <p class="card-text fw-400">Our crispy original wings are exactly what you want. They're tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Original Wings</h5>
+                    <p class="card-text fw-400">Our crispy original wings are exactly what you want. They're tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Original Wings</h5>
+                    <p class="card-text fw-400">Our crispy original wings are exactly what you want. They're tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title">Original Wings</h5>
+                    <p class="card-text fw-400">Our crispy original wings are exactly what you want. They're tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto">
+          <div class="row justify-content-center" style="gap: 2rem;">
+            <div class="col-md-5 bor" style="position: relative;">
+              <hr class="rekha">
+              <hr class="rekha2">
+              <h1 class="pb-4">WHAT'S YOUR FLAVOR?</h1>
+              <div class="col-md-12">
+                <p class="category pb-3 text-center">Select your category:</p>
+                <div class="d-flex justify-content-center">
+                  <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist" style="gap: 1.5rem; z-index: 100;">
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
+                        aria-selected="true">
+                        <div style="width: 4rem;">
+                          <img class="img-fluid" src="./assets/images/buffalo.webp" alt="">
+                          <p style="font-size: 15px; font-weight: 700; color: #000; padding-top: 1rem;">BUFFALO</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
+                        aria-selected="false">
+                        <div style="width: 4rem;">
+                          <img class="img-fluid" src="./assets/images/buffalo.webp" alt="">
+                          <p style="font-size: 15px; font-weight: 700; color: #000; padding-top: 1rem;">BUFFALO</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-contact-tab" data-bs-toggle="pill"
+                        data-bs-target="#pills-contact" type="button" role="tab" aria-controls="pills-contact"
+                        aria-selected="false">
+                        <div style="width: 4rem;">
+                          <img class="img-fluid" src="./assets/images/buffalo.webp" alt="">
+                          <p style="font-size: 15px; font-weight: 700; color: #000; padding-top: 1rem;">BUFFALO</p>
+                        </div>
+                      </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                      <button class="nav-link" id="pills-my-tab" data-bs-toggle="pill" data-bs-target="#pills-my"
+                        type="button" role="tab" aria-controls="pills-my" aria-selected="false">
+                        <div style="width: 4rem;">
+                          <img class="img-fluid" src="./assets/images/buffalo.webp" alt="">
+                          <p style="font-size: 15px; font-weight: 700; color: #000; padding-top: 1rem;">BUFFALO</p>
+                        </div>
+                      </button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="tab-content pt-4" id="pills-tabContent">
+                  <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
+                    aria-labelledby="pills-home-tab" tabindex="0"><img
+                      src="./assets/images/buffalo-flavor-output-high-res.webp" alt="" class="img-fluid"></div>
+                  <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab"
+                    tabindex="0"><img src="./assets/images/dry-rub-results-final_2.webp" alt="" class="img-fluid"></div>
+                  <div class="tab-pane fade" id="pills-contact" role="tabpanel" aria-labelledby="pills-contact-tab"
+                    tabindex="0"><img src="./assets/images/sweet-no-heat-flavor-output-high-res.webp" alt=""
+                      class="img-fluid"></div>
+                  <div class="tab-pane fade" id="pills-my" role="tabpanel" aria-labelledby="pills-my-tab" tabindex="0">
+                    <img src="./assets/images/sweet-n-spicy-flavor-output-high-res.webp" alt="" class="img-fluid">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-5 fast">
+              <div class="row">
+                <div class="col-md-12">
+                  <h1>MENU MATH</h1>
+                  <p>Choose a Snack, Meal or Feast. Scroll through to decide!</p>
+                  <p class="text-center">HOW MANY PEOPLE?</p>
+                  <div class="slider-container pt-5 range">
+                    <div class="number-display" id="number-display">1</div>
+                    <input type="range" min="1" max="10" value="1" class="slider" id="range-slider">
+                    <div class="labels">
+                      <span class="label-min">1</span>
+                      <span class="label-max">10</span>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-12">
+                  
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <section>
+      <div class="container-fluid p-5">
+        <div class="col-md-9 mx-auto">
+          <div class="row mx-auto justify-content-center" style="gap: 70px;">
+            <div class="col-md-5 ocean">
+              <div class="pad">
+                <h1 class="zone-head">OWN THE ZONE</h1>
+                <P class="zone-txt">Franchise with <br> Wing Zone now!</P>
+                <button type="button" class="btn btn-outline-dark learn-btn">LEARN MORE</button>
+              </div>
+            </div>
+            <div class="col-md-5 sun">
+              <div class="pad">
+                <h1 class="zone-head">LEARN ABOUT THE NEW WING ZONE</h1>
+                <p class="zone-txt">Our revolutionary cooking<br>
+                  process makes bigger, juicer,<br>
+                  tastier wings in way less time</P>
+                <button type="button" class="btn btn-outline-dark learn-btn">LEARN MORE</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container-fluid backblack px-5">
+      <div class="row seprator pb-3 pt-4">
+        <div class="col-md-6 p-0">
+          <ul class="fot nav">
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">ABOUT US</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">NEWS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">FRANCHISE</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">NUTRITION INFO</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">CAREERS</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">FAQ</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">CONTACT US</a></li>
+          </ul>
+        </div>
+        <div class="col-md-3 p-0 d-flex leftsocial">
+          <ul class="fot nav  leftsocial">
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">FOLLOW US</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-facebook"></i></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-twitter"></i></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-youtube"></i></a>
+            </li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-instagram"></i></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="row py-3">
+        <div class="col-md-4 p-0 d-flex leftsocial">
+          <ul class="fot nav leftsocial justify-content-center">
+            <li class="nav-item"><a href="#" class="nav-link px-2 but ">Accessibility</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but">Privacy Policy</a></li>
+            <li class="nav-item"><a href="#" class="nav-link px-2 but">CA Privacy Notice</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="row pb-5 text-center">
+        <div class="d-flex flex-column flex-sm-row justify-content-between p-0">
+          <p style="color: #fff;">© Capriotti’s Sandwich Shop, Inc. 2024</p>
+          <a class="p-0"
+            href="https://privacy.capriottis.com/opt-out?_gl=1*6cvumj*_gcl_au*MTM1NDg3NTkzOC4xNzI2MDU5MDUw*_ga*NTM5NjU2MzY5LjE3MjYwNTkwNTE.*_ga_7QST02Q94G*MTcyNjQ3NDE0Ni43LjAuMTcyNjQ3NDE0Ni42MC4wLjA."
+            target="_blank" rel="noreferrer noopener" aria-label="Opt Out"><img
+              src="https://polaris.truevaultcdn.com/static/assets/icons/optout-icon-blue.svg"
+              alt="California Consumer Privacy Act (CCPA) Opt-Out Icon" style="vertical-align:middle;margin-right:5px"
+              height="14px"></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script>
+    // Get elements
+    const slider = document.getElementById("range-slider");
+    const display = document.getElementById("number-display");
+
+    // Update display when slider is moved
+    slider.oninput = function () {
+      display.innerText = this.value;
+    }
+
+  </script>
 </body>
 
 </html>

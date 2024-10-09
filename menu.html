@@ -10,51 +10,89 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
   <link rel="stylesheet" href="./assets/css/styles.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+
   <style>
-    .back{
-        background-image: url('./assets/images/WZ-Classics-Banner-Desktopv2.webp');
-        background-repeat: no-repeat;
-        background-position: center center;
-        background-size: 100%;
+    .menudrop {
+      position: relative;
+      width: 300px;
+      border-bottom: 2px solid black;
     }
-    .sides{
-        color: #fff;
-        padding: 7rem 0rem 5rem 10rem;
+
+    .menudrop-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 10px;
+      font-size: 18px;
+      cursor: pointer;
+      color: #2a2a2a;
+      font-weight: bold;
     }
-    .sides-title{
-        font-size: 5.5rem;
-        line-height: 1;
+
+    .menudrop-header:after {
+      content: '\25BC';
+      /* Down arrow icon */
+      font-size: 16px;
+      transition: transform 0.3s ease;
     }
-    .sides-head{
-        font-size: 2.25rem;
+
+    .menudrop-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: rgb(255, 253, 232);
+      width: 100%;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      z-index: 1;
     }
-    .sides-txt{
-        font-size: 1.2rem;
+
+    .menudrop-menu a {
+      display: block;
+      padding: 10px;
+      text-decoration: none;
+      color: #2a2a2a;
+      font-size: 16px;
     }
-    .menu-head{
-        text-shadow: rgb(233, 95, 61) 1px 0px 0px, rgb(233, 95, 61) -1px 0px 0px, rgb(233, 95, 61) 0px 1px 0px, rgb(233, 95, 61) 0px -1px 0px, rgb(233, 95, 61) 1px 1px, rgb(233, 95, 61) -1px -1px 0px, rgb(233, 95, 61) 1px -1px 0px, rgb(233, 95, 61) -1px 1px 0px;
-        font-size: 3rem;
-        line-height: 1;
-        font-weight: 700;
-        text-transform: uppercase;
+
+    .menudrop-menu a:hover {
+      background-color: rgb(255, 253, 232);
     }
-    .popular{
-        border: 3px solid rgb(28, 184, 223);
+
+    .show .menudrop-menu {
+      display: block;
     }
-    .pop-title{
-        font-size: 1rem;
-        background-color: rgb(28, 184, 223);
-        padding: 0.7rem 4rem;
-        position: absolute; 
-        top: -2.4rem;
-        left: 4rem;
-        z-index: 0;
+
+    .show .menudrop-header:after {
+      transform: rotate(180deg);
+      /* Rotate arrow for open state */
     }
-    .clasic-txt{
-        font-size: 1.875rem;
-        line-height: 2.25rem;
+    .desktop{
+      display: block;
+    }
+    .mobile{
+      display: none;
+    }
+    .menubar{
+      position: sticky; 
+      top: 5.5rem; 
+      z-index: 500;
+    }
+    @media (max-width: 768px){
+      .desktop{
+        display: none;
+      }
+      .mobile{
+        display: block;
+      }
+      .sides{
+        padding: 0;
+      }
     }
   </style>
+
 
 </head>
 
@@ -104,355 +142,394 @@
   </header>
 
   <main>
-    <section style="position: sticky; top: 5.5rem; z-index: 500;">
-        <nav class="navbar navbar-expand-lg" style="background-color: rgb(255, 253, 232); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);">
-            <div class="container-fluid py-1">
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                  </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto koro" style="gap: 5rem; font-size: 1.2rem;">
-                  <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#boneless">Boneless Wings</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#original">Original Bone-In Wings</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link" href="#tender">Tenders</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link" href="#classics">Wing Zone Classics</a>
-                  </li>
-                  <li class="nav-item dropdown">
-                    <a class="nav-link" href="#sides">Sides & Sweets</a>
-                  </li>
-                </ul>
-              </div>
-            </div>
-          </nav>
+    <section class="menubar">
+      <nav class="navbar navbar-expand-lg desktop"
+        style="background-color: rgb(255, 253, 232); box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);">
+        <div class="container-fluid py-1">
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+            data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0 mx-auto koro" style="gap: 5rem; font-size: 1.2rem;">
+              <li class="nav-item">
+                <a class="nav-link" aria-current="page" href="#boneless">Boneless Wings</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#original">Original Bone-In Wings</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#tender">Tenders</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#classics">Wing Zone Classics</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link" href="#sides">Sides & Sweets</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </section>
+
+    <section style="position: fixed; top: 50px; width: 100%; z-index: 500;">
+      <div class="container-fluid mobile py-2" style="background-color: rgb(255, 253, 232);">
+        <div class="menudrop mx-auto" onclick="toggleDropdown(event,this)">
+          <div class="menudrop-header koro" id="dropdownTitle">Boneless Wings</div>
+          <div class="menudrop-menu koro">
+            <a href="#boneless" onclick="updateTitle(this)">Boneless Wings</a>
+            <a href="#original" onclick="updateTitle(this)">Original Bone-In Wings</a>
+            <a href="#tender" onclick="updateTitle(this)">Tenders</a>
+            <a href="#classics" onclick="updateTitle(this)">Wing Zone Classics</a>
+            <a href="#sides" onclick="updateTitle(this)">Sides & Sweets</a>
+          </div>
+        </div>
+    </div>
     </section>
 
     <section id="boneless" class="pt-5">
-        <div class="container-fluid">
-            <div class="col-md-9 mx-auto">
-                <h1 class="menu-head koro text-center">BONELESS WINGS</h1>
-                <div class="col-md-10 mx-auto mt-5 py-5">
-                    <div class="row ">
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
-                        <p class="pop-title koro">Popular!</p>
-                        <div class="card text-center shadow popular">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto">
+          <h1 class="menu-head koro text-center">BONELESS WINGS</h1>
+          <div class="col-md-10 mx-auto mt-5 py-5">
+            <div class="row">
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
                   </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
+                <p class="pop-title koro">Popular!</p>
+                <div class="card text-center shadow popular">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="original" class="pt-5">
-        <div class="container-fluid">
-            <div class="col-md-9 mx-auto">
-                <h1 class="menu-head koro text-center">
-                    Original Bone-In Wings</h1>
-                <div class="col-md-10 mx-auto mt-5 py-5">
-                    <div class="row ">
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
-                        <p class="pop-title koro">Popular!</p>
-                        <div class="card text-center shadow popular">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto">
+          <h1 class="menu-head koro text-center">
+            Original Bone-In Wings</h1>
+          <div class="col-md-10 mx-auto mt-5 py-5">
+            <div class="row ">
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
                   </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
+                <p class="pop-title koro">Popular!</p>
+                <div class="card text-center shadow popular">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="tender" class="pt-5">
-        <div class="container-fluid">
-            <div class="col-md-9 mx-auto">
-                <h1 class="menu-head koro text-center">
-                    TENDERS</h1>
-                <div class="col-md-10 mx-auto py-5">
-                    <div class="row ">
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
-                        <div class="card text-center shadow ">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto">
+          <h1 class="menu-head koro text-center">
+            TENDERS</h1>
+          <div class="col-md-10 mx-auto py-5">
+            <div class="row ">
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
                   </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
+                <div class="card text-center shadow ">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <section id="classics" class="pt-5">
-        <div class="container-fluid">
-            <div class="col-md-9 mx-auto">
-                <h1 class="menu-head koro text-center">
-                    WING ZONE CLASSICS</h1>
-                    <P class="clasic-txt koro text-center mt-5">Sometimes, you want more than wings. You can find these at our original locations!</P>
-                <div class="col-md-10 mx-auto py-5">
-                    <div class="row ">
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
-                        <div class="card text-center shadow ">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto">
+          <h1 class="menu-head koro text-center">
+            WING ZONE CLASSICS</h1>
+          <P class="clasic-txt koro text-center mt-5">Sometimes, you want more than wings. You can find these at our
+            original locations!</P>
+          <div class="col-md-10 mx-auto py-5">
+            <div class="row ">
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
                   </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
+                <div class="card text-center shadow ">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>  
+      </div>
+    </section>
 
     <section id="sides" class="pt-5">
-        <div class="container-fluid">
-            <div class="col-md-9 mx-auto">
-                <h1 class="menu-head koro text-center">
-                    SIDES & SWEETS</h1>
-                <div class="col-md-10 mx-auto pt-5">
-                    <div class="row ">
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
-                        <div class="card text-center shadow ">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-md-3 pt-5 pt-md-0">
-                        <div class="card text-center shadow">
-                          <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
-                          <div class="card-body">
-                            <h5 class="card-title koro">Original Wings</h5>
-                            <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're tossed in
-                              one of our award-winning flavors, and will be in your hands right when you want them.
-                            </p>
-                            <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto">
+          <h1 class="menu-head koro text-center">
+            SIDES & SWEETS</h1>
+          <div class="col-md-10 mx-auto pt-5">
+            <div class="row ">
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
                   </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0" style="position: relative;">
+                <div class="card text-center shadow ">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-3 pt-5 pt-md-0">
+                <div class="card text-center shadow">
+                  <img class="card-img-top" src="./assets/images/Original-Fries.webp" alt="Card image cap">
+                  <div class="card-body">
+                    <h5 class="card-title koro">Original Wings</h5>
+                    <p class="card-text fw-400 rubik">Our crispy original wings are exactly what you want. They're
+                      tossed in
+                      one of our award-winning flavors, and will be in your hands right when you want them.
+                    </p>
+                    <a href="#" class="btn btn-red-cta jkDfbL koro">ORDER NOW</a>
+                  </div>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </section>  
+      </div>
+    </section>
 
     <section class="py-5 mb-5">
-        <div class="container-fluid">
-            <div class="col-md-9 mx-auto back">
-                <div class="col-md-6 sides">
-                    <h1 class="sides-title koro pb-4">WING ZONE CLASSICS</h1>
-                    <p class="sides-head koro m-0">SERVED AT OUR ORIGINAL LOCATIONS</p>
-                    <P class="sides-txt rubik mb-4">Sandwiches, Sides & More!</P>
-                    <a href="#" class="btn btn-red-cta jkDfbL koro">FIND MY WZ!</a>
-                </div>
-            </div>
+      <div class="container-fluid">
+        <div class="col-md-9 mx-auto back">
+          <div class="col-md-6 sides">
+            <h1 class="sides-title koro pb-4">WING ZONE CLASSICS</h1>
+            <p class="sides-head koro m-0">SERVED AT OUR ORIGINAL LOCATIONS</p>
+            <P class="sides-txt rubik mb-4">Sandwiches, Sides & More!</P>
+            <a href="#" class="btn btn-red-cta jkDfbL koro">FIND MY WZ!</a>
+          </div>
         </div>
+      </div>
     </section>
-    
+
   </main>
 
   <footer>
@@ -518,7 +595,30 @@
     crossorigin="anonymous"></script>
   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.js"></script>
   <script src="//cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/script.js"></script>
-  
+
+  <script>
+     function toggleDropdown(event, menudrop) {
+    event.stopPropagation();
+    menudrop.classList.toggle("show");
+  }
+
+  function updateTitle(event, element) {
+    event.preventDefault();
+    event.stopPropagation(); // Prevent the event from bubbling up
+    const titleElement = document.getElementById("dropdownTitle");
+    titleElement.textContent = element.textContent;
+    element.closest('.menudrop').classList.remove('show'); // Close the dropdown after selecting
+  }
+
+  // Close dropdown if the user clicks outside
+  window.onclick = function(event) {
+    const menudrops = document.getElementsByClassName("menudrop");
+    for (let i = 0; i < menudrops.length; i++) {
+      menudrops[i].classList.remove('show');
+    }
+  }
+  </script>
+
 </body>
 
 </html>

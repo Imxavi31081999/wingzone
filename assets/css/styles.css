@@ -1,3 +1,7 @@
+body{
+  overflow-x: hidden !important;
+}
+
 /*--------font--------*/
 @font-face {
   font-family: 'Korolev Condensed Bold';
@@ -18,6 +22,7 @@
 .rubik{
   font-family: 'Rubik Condensed Bold';
 }
+
 /*--------index----------*/
 
 .nodisp {
@@ -55,10 +60,15 @@
   border: 2px solid rgb(233, 95, 61);
   font-weight: 700;
   border-radius: 0;
+  text-wrap: nowrap;
 }
 
 .shadow{
   box-shadow: rgba(0, 0, 0, 0.25) 0px 0px 13px !important;
+}
+ 
+.card{
+  border-radius: 0;
 }
 
 .jkDfbL:hover {
@@ -322,3 +332,70 @@ ul.fot li.nav-item a {
   font-weight: 700;
 }
 /*---------new-wz---------*/
+
+/*-------------Menu---------------*/
+.back {
+  background-image: url('../images/WZ-Classics-Banner-Desktopv2.webp');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 100%;
+}
+
+.sides {
+  color: #fff;
+  padding: 7rem 0rem 5rem 10rem;
+}
+
+.sides-title {
+  font-size: 5.5rem;
+  line-height: 1;
+}
+
+.sides-head {
+  font-size: 2.25rem;
+}
+
+.sides-txt {
+  font-size: 1.2rem;
+}
+
+.menu-head {
+  text-shadow: rgb(233, 95, 61) 1px 0px 0px, rgb(233, 95, 61) -1px 0px 0px, rgb(233, 95, 61) 0px 1px 0px, rgb(233, 95, 61) 0px -1px 0px, rgb(233, 95, 61) 1px 1px, rgb(233, 95, 61) -1px -1px 0px, rgb(233, 95, 61) 1px -1px 0px, rgb(233, 95, 61) -1px 1px 0px;
+  font-size: 3rem;
+  line-height: 1;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.popular {
+  border: 3px solid rgb(28, 184, 223);
+}
+
+.pop-title {
+  font-size: 1rem;
+  background-color: rgb(28, 184, 223);
+  padding: 0.7rem 4rem;
+  position: absolute;
+  top: -2.4rem;
+  left: 4rem;
+  z-index: 0;
+}
+
+.clasic-txt {
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+}
+
+/*-------------Menu---------------*/
+
+
+/*-----------flavour--------------*/
+
+.tick {
+  position: absolute;
+}
+.flav-img{
+  padding: 20px;
+}
+
+/*-----------flavour--------------*/

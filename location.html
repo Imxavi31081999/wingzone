@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>WingZone</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/freeps2/a7rarpress@main/swiper-bundle.min.css">
+
+</head>
+
+<body>
+    <header style="position: sticky; top: 0; z-index: 1000; box-shadow: 0 4px 6px -1px rgb(0 0 0/0.1),0 2px 4px -2px rgb(0 0 0/0.1);">
+        <nav class="navbar navbar-expand-lg" style="background-color: #fff;">
+            <div class="container-fluid">
+                <div class="nodisp">
+                    <a class="navbar-brand" href="./index.html"><img src="./assets/images/WZ-logo-desktop.svg"
+                            alt=""></a>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse centi" id="navbarNavDropdown">
+                    <ul class="navbar-nav koro" style="gap: 3rem; align-items: center; font-size: 1rem;">
+                        <li class="nav-item">
+                            <a class="navbar-brand" href="./index.html"><img src="./assets/images/WZ-logo-desktop.svg"
+                                    alt=""></a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./new-wz.html">NEW WZ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./menu.html">OUR MENU</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./flavours.html">FLAVORS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#">FRANCHISING</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./offers.html">OFFERS</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./location.html">LOCATIONS</a>
+                        </li>
+                        <li class="nav-item p-2">
+                            <button class="btn" type="submit"
+                                style="color: #000;font-size: 1rem; font-weight: 700;  padding: 14px 40px; border-radius: 0; border: 2px solid red;">ORDER
+                                ONLINE</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-3  pb-5">
+                        <div class="container py-5 page">
+                            <h5 class="wel koro mb-4">Welcome</h5>
+                            <p class="below koro">Search or view nearby locations below</p>
+                            <div class="input-group mt-3 col-md-6 mx-auto">
+                                <input type="text" class="form-control" placeholder="Enter your zip code">
+                                <div class="input-group-append">
+                                    <button class="btn btn-danger" type="button">SEARCH</button>
+                                </div>
+                            </div>
+
+                            <div class="pt-4" style="text-align: center;">
+                                <p class="mt-3 koro">To find a Wing Zone store, enter city, state, or zip code above.
+                                </p>
+                                <div class="d-flex justify-content-center">
+                                    <p class="or koro">
+                                        &nbsp;or&nbsp;
+                                    </p>
+                                </div>
+
+                                <a href="#" class="use-location koro">
+                                    Use my current location &nbsp;
+                                    <svg width="24" height="24" viewBox="0 0 34 34" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <title>location</title>
+                                        <path
+                                            d="M16 27C22.0751 27 27 22.0751 27 16C27 9.92487 22.0751 5 16 5C9.92487 5 5 9.92487 5 16C5 22.0751 9.92487 27 16 27Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M16 29.5V24.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M29.5 16H24.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path d="M2.5 16H7.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                        <path
+                                            d="M16 20C18.2091 20 20 18.2091 20 16C20 13.7909 18.2091 12 16 12C13.7909 12 12 13.7909 12 16C12 18.2091 13.7909 20 16 20Z"
+                                            stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                            stroke-linejoin="round"></path>
+                                        <path d="M16 2.5V7.5" stroke="currentColor" stroke-width="2"
+                                            stroke-linecap="round" stroke-linejoin="round"></path>
+                                    </svg>
+                                </a>
+
+                                <hr class="spacer">
+
+                                <div class="mt-4">
+                                    <button type="button" class="btn koro alloc">View All Location</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-9 p-0">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d206314.17521305353!2d-115.47867590546875!3d36.10179999999998!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80c8c5b73c85d1d3%3A0x3efd856559b93c85!2sWing%20Zone!5e0!3m2!1sen!2sin!4v1728546492921!5m2!1sen!2sin"
+                            width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"
+                            referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container-fluid backblack px-5">
+            <div class="row seprator pb-3 pt-4">
+                <div class="col-md-6 p-0">
+                    <ul class="fot nav rubik">
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">ABOUT US</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">NEWS</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">FRANCHISE</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">NUTRITION INFO</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">CAREERS</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">FAQ</a></li>
+                        <li class="nav-item"><a href="./contact.html" class="nav-link px-2 but ">CONTACT US</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-3 p-0 d-flex leftsocial">
+                    <ul class="fot nav  leftsocial rubik">
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">FOLLOW US</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-facebook"></i></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-twitter"></i></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-youtube"></i></a>
+                        </li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but"><i class="bi bi-instagram"></i></a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row py-3">
+                <div class="col-md-4 p-0 d-flex leftsocial">
+                    <ul class="fot nav leftsocial justify-content-center rubik">
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but ">Accessibility</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but">Privacy Policy</a></li>
+                        <li class="nav-item"><a href="#" class="nav-link px-2 but">CA Privacy Notice</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="row pb-5 text-center">
+                <div class="d-flex flex-column flex-sm-row justify-content-between p-0 rubik">
+                    <p style="color: #fff;">© Wing Zone 2024</p>
+                    <a class="p-0"
+                        href="https://privacy.capriottis.com/opt-out?_gl=1*6cvumj*_gcl_au*MTM1NDg3NTkzOC4xNzI2MDU5MDUw*_ga*NTM5NjU2MzY5LjE3MjYwNTkwNTE.*_ga_7QST02Q94G*MTcyNjQ3NDE0Ni43LjAuMTcyNjQ3NDE0Ni42MC4wLjA."
+                        target="_blank" rel="noreferrer noopener" aria-label="Opt Out"><img
+                            src="https://polaris.truevaultcdn.com/static/assets/icons/optout-icon-blue.svg"
+                            alt="California Consumer Privacy Act (CCPA) Opt-Out Icon"
+                            style="vertical-align:middle;margin-right:5px" height="14px"></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+        integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

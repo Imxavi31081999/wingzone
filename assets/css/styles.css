@@ -117,6 +117,7 @@ body{
   border: 2px solid rgb(1, 23, 28);
   font-size: 1rem;
   font-weight: 700;
+  border-radius: 0;
 }
 
 /* Container for the slider */
@@ -333,6 +334,7 @@ ul.fot li.nav-item a {
 }
 /*---------new-wz---------*/
 
+
 /*-------------Menu---------------*/
 .back {
   background-image: url('../images/WZ-Classics-Banner-Desktopv2.webp');
@@ -399,3 +401,71 @@ ul.fot li.nav-item a {
 }
 
 /*-----------flavour--------------*/
+
+
+/*----------contact---------------*/
+
+.smallfed{
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+}
+.midfed{
+  font-size: 1.875rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+}
+.overtxt{
+  position: absolute;
+  top: 13rem;
+  text-align: center;
+  padding: 0rem 35rem 0rem 10rem;
+}
+
+/*----------contact---------------*/
+
+
+/*---------location---------------*/
+
+.wel{
+  font-size: 32px;
+  font-weight: 400;
+}
+.below{
+  font-size: 16px;
+  font-weight: normal !important;
+}
+.use-location{
+  text-decoration: none;
+  color: rgb(233, 96, 61);
+}
+.spacer{
+  color: rgb(28, 184, 223);
+  opacity: 1;
+}
+.or{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: gray;
+  font-size: 16px;
+  width: 30%;
+}
+.or::after, .or::before{
+  content: "";
+  flex: 1;
+  border-bottom: 1px solid gray;
+}
+.alloc{
+  color: rgb(28, 184, 223);
+  border: 1px solid rgb(28, 184, 223);
+  padding: 0.8rem 1.5rem;
+  border-radius: 0;
+}
+.page{
+  padding-bottom: 8.8rem !important;
+}
+
+/*---------location---------------*/
+
+/*additional media query*/

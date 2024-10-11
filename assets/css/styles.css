@@ -135,7 +135,7 @@ body{
   font-weight: bold;
   color: black;
   position: absolute;
-  bottom: 5px;
+  top: -100px;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -469,3 +469,8 @@ ul.fot li.nav-item a {
 /*---------location---------------*/
 
 /*additional media query*/
+@media (max-width: 1440px){
+  .col-md-9{
+    width: 100%;
+  }
+}

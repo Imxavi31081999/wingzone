@@ -35,8 +35,11 @@ body {
   display: none;
 }
 
-.desktop{
+.desktop {
   display: flex;
+}
+.mobile{
+  display: none;
 }
 
 .centi {
@@ -53,15 +56,18 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
-.category-btn{
+
+.category-btn {
   width: 4rem;
 }
-.cate{
-  gap: 1.5rem; 
+
+.cate {
+  gap: 1.5rem;
   z-index: 100;
 }
-.whatsec{
-  gap: 2rem; 
+
+.whatsec {
+  gap: 2rem;
   padding: 0 2.1rem;
 }
 
@@ -76,63 +82,74 @@ body {
     overflow-x: scroll;
   }
 
-  .desktop{
+  .desktop {
     display: none;
   }
+  .mobile{
+    display: block;
+  }
 
-  .card-gap{
+  .card-gap {
     padding: 0 1.5rem;
   }
 
 
-.centi {
-  justify-content: end;
-}
+  .centi {
+    justify-content: end;
+  }
 
-.nopad {
-  padding: 0 !important;
-}
+  .nopad {
+    padding: 0 !important;
+  }
 
-.car-img {
-  height: 15rem !important;
-}
+  .car-img {
+    height: 15rem !important;
+  }
 
-.head-gap {
-  gap: 3rem;
-}
+  .head-gap {
+    gap: 3rem;
+  }
 
-.flavor{
-  background-size: cover;
-}
-.category-btn{
-  width: 2rem;
-}
-.cate{
-  gap: 2rem;
-}
+  .flavor {
+    background-size: cover;
+  }
 
-.bor{
-  padding: 2rem 1rem !important;
-}
-.rekha2{
-  top: 20.2rem !important;
-  width: 90% !important;
-}
-.rekha{
-  width: 90% !important;
-}
-.labels{
-  gap: 13rem !important;
-}
-.slider-container{
-  width: 180px !important;
-}
-.whatsec{
-  padding: 0 1rem;
-}
-.catnav{
-  padding: 0;
-}
+  .category-btn {
+    width: 2rem;
+  }
+
+  .cate {
+    gap: 2rem;
+  }
+
+  .bor {
+    padding: 2rem 1rem !important;
+  }
+
+  .rekha2 {
+    top: 20.2rem !important;
+    width: 90% !important;
+  }
+
+  .rekha {
+    width: 90% !important;
+  }
+
+  .labels {
+    gap: 13rem !important;
+  }
+
+  .slider-container {
+    width: 180px !important;
+  }
+
+  .whatsec {
+    padding: 0 1rem;
+  }
+
+  .catnav {
+    padding: 0;
+  }
 }
 
 .jkDfbL {
@@ -422,6 +439,16 @@ ul.fot li.nav-item a {
   font-weight: 700;
 }
 
+@media (max-width: 768px) {
+  .big-head {
+    font-size: 4rem;
+  }
+
+  .gfgw {
+    font-size: 1.2rem;
+  }
+}
+
 /*---------new-wz---------*/
 
 
@@ -477,6 +504,50 @@ ul.fot li.nav-item a {
   font-size: 1.875rem;
   line-height: 2.25rem;
 }
+.swee{
+  display: flex;
+}
+.sweep{
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .back {
+    background-image: url('../images/WZ-Classics-Banner-Mobile.webp');
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 100%;
+  }
+  .sides-title{
+    font-size: 3.25rem;
+  }
+  .sides{
+    text-align: center;
+    padding: 15rem 0;
+  }
+
+  .swee{
+    display: none;
+  }
+
+  .sweep{
+    display: flex;
+    flex-direction: row;
+    overflow-x: scroll;
+  }
+  .above{
+    padding-top: 6rem !important;
+  }
+  .pop-title{
+    top: 0.5rem;
+  }
+  .menu-head{
+    font-size: 2.25rem;
+  }
+  .clasic-txt{
+    font-size: 1.25rem;
+  }
+}
 
 /*-------------Menu---------------*/
 
@@ -515,6 +586,14 @@ ul.fot li.nav-item a {
   padding: 0rem 35rem 0rem 10rem;
 }
 
+@media (max-width: 768px){
+  .overtxt {
+    position: absolute;
+    top: 13rem;
+    text-align: center;
+    padding: 15rem 0rem 0rem 0rem;
+}
+}
 /*----------contact---------------*/
 
 

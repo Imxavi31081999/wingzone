@@ -105,17 +105,21 @@ body {
   background-size: cover;
 }
 .category-btn{
-  width: 2.8rem;
+  width: 2rem;
 }
 .cate{
-  gap: 0.2rem;
+  gap: 2rem;
 }
+
 .bor{
   padding: 2rem 1rem !important;
 }
 .rekha2{
-  top: 22rem !important;
-  width: 92% !important;
+  top: 20.2rem !important;
+  width: 90% !important;
+}
+.rekha{
+  width: 90% !important;
 }
 .labels{
   gap: 13rem !important;
@@ -125,6 +129,9 @@ body {
 }
 .whatsec{
   padding: 0 1rem;
+}
+.catnav{
+  padding: 0;
 }
 }
 

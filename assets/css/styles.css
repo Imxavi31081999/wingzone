@@ -319,7 +319,7 @@ body {
   color: rgb(233, 95, 61);
   opacity: 1;
   position: absolute;
-  top: 15.5rem;
+  top: 13.5rem;
   width: 88%;
 }
 
@@ -409,6 +409,13 @@ ul.fot li.nav-item a {
     margin: auto;
     display: flex;
     flex-direction: row;
+  }
+  .rekha {
+    color: rgb(233, 95, 61);
+    opacity: 1;
+    position: absolute;
+    top: 15.5rem;
+    width: 88%;
   }
 }
 
